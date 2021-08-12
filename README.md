@@ -31,5 +31,10 @@ docker-compose run app rails webpacker:install
 
 docker-compose build  
 docker-compose up  
-docker-compose run app rake db:create  
+docker-compose run app rails webpacker:install  
+docker-compose run app rails webpacker:install:vue  
+docker-compose run app rails db:create  
+
+コンテナに入る
+docker exec -it techpit_rails_vue_app_1 /bin/ash
 
