@@ -22,3 +22,14 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+https://qiita.com/naokit-dev/items/99225bf3d8665ecfdec2
+
+webpackerのインストール  
+docker-compose run app rails webpacker:install  
+
+docker-compose build  
+docker-compose up  
+docker-compose run app rake db:create  
+
