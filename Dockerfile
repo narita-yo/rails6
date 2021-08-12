@@ -34,6 +34,9 @@ COPY Gemfile $ROOT
 COPY Gemfile.lock $ROOT
 
 RUN bundle install -j4
+RUN rails db:create
+RUN rails webpacker:install:vue
+
 #　不要ファイル削除
 RUN rm -rf /usr/local/bundle/cache/* /usr/local/share/.cache/* /var/cache/* /tmp/* && \
 apk del build-packs
